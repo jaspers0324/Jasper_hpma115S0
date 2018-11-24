@@ -13,10 +13,8 @@ SoftwareSerial hpmaSerial(10, 11); // Feather TX, Feather RX
 Jasper_HPMA115S0 hpma115S0(hpmaSerial);
 
 void setup() {
-  Serial.begin(57600);
+  Serial.begin(9600);
   hpmaSerial.begin(9600);
-  delay(5000);
-  Serial.println("Starting...");
   hpma115S0.Init();
   hpma115S0.StartParticleMeasurement();
 }

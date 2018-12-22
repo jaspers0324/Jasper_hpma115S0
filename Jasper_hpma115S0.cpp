@@ -54,11 +54,11 @@ void Jasper_HPMA115S0::SendCmd(unsigned char * cmdBuf, unsigned int cmdSize) {
   //Serial.print("PS- Sending cmd: ");
   unsigned int index = 0;
   for (index = 0; index < cmdSize; index++) {
-    Serial.print(cmdBuf[index], HEX);
-    Serial.print(" ");
-    _serial.write(cmdBuf[index]);
+    //Serial.print(cmdBuf[index], HEX); //This line I confirm to disclose. 
+    //Serial.print(" "); //This line I confirm to disclose. 
+    _serial.write(cmdBuf[index]); 
   }
-  Serial.println("");
+  //Serial.println(""); //This line I confirm to disclose. 
   return;
 }
 
